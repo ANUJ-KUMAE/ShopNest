@@ -1,0 +1,58 @@
+.Search-item-container
+{
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.Search-data-lists img,
+.Error2 img
+{
+    height: 50vh;
+    border-radius: 20px;
+}
+
+.Search-paragraph
+{
+    font-family: cursive;
+    font-size: 1.2rem;
+}
+
+.searchpage-Container
+{
+    background-color: white;
+    margin: 0.5rem 1rem;
+}
+
+.search-lists-datas
+{
+    background-color: rgb(226, 222, 222);
+    border-radius: 10px;
+    margin: 1rem;
+}
+
+.search-section-datas
+{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.cards .card-data-flex
+{
+    text-align: center;
+}
+
+@media screen and (max-width:890px)
+{
+    .search-section-datas
+    {
+        grid-template-columns: repeat(3, 1fr);
+    }    
+}
+
+@media screen and (max-width:450px)
+{
+   .cards .card-data-flex
+   {
+      font-size: 10px;
+   }
+}

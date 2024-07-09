@@ -1,0 +1,494 @@
+.Header-component {
+  padding: 0 1rem 0.5rem 1rem;
+  /* background-color: rgb(203, 206, 208); */
+}
+
+.Header-component .grid-two-column {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  background-color: white;
+  margin: 0 8rem;
+  padding: 2rem;
+}
+
+.Product-Data {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: auto 0;
+  width: 50%;
+}
+
+.Product-Data .single-product-name {
+  font-size: 1.5rem;
+}
+
+.Product-Images {
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+  display: inline-block;
+  margin: 10px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+}
+
+.Product-Images .img {
+  width: 100%;
+  height: 110%;
+  margin: auto;
+  object-fit: cover;
+}
+
+.ProductData-Price {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.ratings-and-reviews {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #a4a3a3;
+}
+
+.ratings-and-reviews .rating-star {
+  color: yellow;
+}
+
+.ProductData-Warranty {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.SingleProduct-Warranty {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.SingleProduct-Warranty .Warranty-icon {
+  font-size: 1.5rem;
+  color: brown;
+}
+
+.Productdata-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.Customer-reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 1rem;
+}
+
+.customers-reviews-data {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.customer-reviews-rating {
+  font-size: 1rem;
+  margin-left: 1rem;
+  color: #a4a3a3;
+}
+
+.customer-review-detail {
+  text-align: left;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Seller-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.cart-button {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.amount-toogle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.btnn {
+  border: none;
+  background: none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 20px;
+}
+
+.f-minus,
+.f-plus {
+  display: flex;
+  justify-content: center;
+  padding: 4px 8px;
+  font-size: 1.6rem;
+}
+
+.amount-quantity {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 4px 12px;
+  font-size: 1.2rem;
+}
+
+.cart-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: orange;
+  cursor: pointer;
+  color: white;
+  border: none;
+}
+
+.add-cart-icon {
+  font-size: 1.2rem;
+}
+
+.cart-btn a {
+  text-decoration: none;
+  color: black;
+}
+
+.cart-buy-button {
+  display: flex;
+  gap: 1rem;
+}
+
+/*------------------------Similar Products-------------------------*/
+
+.similar-products {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0.5rem 0;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background-color: white;
+  padding: 16px 10px;
+}
+
+.Similar-Product-Components {
+  margin: 0.5rem 8rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background-color: white;
+  padding: 16px;
+}
+
+/* .similar-products-grid {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
+
+.no-similar-found {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+}
+
+/*----------------Page Loading--------------------*/
+
+.page_Loading {
+  text-align: center;
+  margin: 5rem;
+}
+
+.page_loading_icon {
+  font-size: 5rem;
+  animation: spin 2s linear infinite;
+  margin-bottom: 10px;
+}
+
+.page_Loading_name {
+  font-size: 2.5rem;
+  font-family: cursive;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.Pico,
+.descp,
+.Productdata-info,
+.Seller-details {
+  font-size: 1.2rem;
+}
+
+/*------------------Responsive------------------*/
+
+@media screen and (max-width: 1030px) {
+  .Header-component .grid-two-column {
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .Similar-Product-Components {
+    margin: 0.5rem 0 0 0;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .Product-Images {
+    width: 300px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .Product-Images {
+    width: 180px;
+    height: 180px;
+  }
+
+  .Product-Data .single-product-name {
+    font-size: 1.2rem;
+  }
+
+  .ProductData-Price {
+    font-size: 0.9rem;
+  }
+
+  .ratings-and-reviews {
+    font-size: 0.8rem;
+  }
+
+  .SingleProduct-Warranty .Warranty-icon {
+    font-size: 1.2rem;
+  }
+
+  .Customer-reviews {
+    font-size: 0.9rem;
+  }
+
+  .Pico,
+  .descp,
+  .Productdata-info,
+  .Seller-details,
+  .customer-reviews-rating {
+    font-size: 0.8rem;
+  }
+
+  .Customer-reviews {
+    font-size: 0.8rem;
+  }
+
+  .customer-reviews-rating {
+    font-size: 0.7rem;
+  }
+
+  .f-minus,
+  .f-plus {
+    padding: 2px 6px;
+    font-size: 1.3rem;
+  }
+
+  .amount-quantity {
+    padding: 2px 10px;
+    font-size: 1rem;
+  }
+
+  .cart-btn {
+    font-size: 0.8rem;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .add-cart-icon {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  /* iPhone SE */
+  .Product-Images {
+    max-width: 180px;
+  }
+
+  .ProductData-Price {
+    font-size: 0.8rem;
+  }
+
+  .ratings-and-reviews {
+    font-size: 0.7rem;
+  }
+
+  .SingleProduct-Warranty .Warranty-icon {
+    font-size: 1rem;
+  }
+
+  /* .Pico,
+  .descp,
+  .Productdata-info,
+  .Seller-details,
+  .customer-reviews-rating {
+    font-size: 2px;
+  } */
+}
+
+@media screen and (max-width: 414px) {
+  /* iPhone XR */
+  .Product-Images {
+    max-width: 250px;
+  }
+
+  .ProductData-Price {
+    font-size: 1rem;
+  }
+
+  .ratings-and-reviews {
+    font-size: 0.9rem;
+  }
+
+  .SingleProduct-Warranty .Warranty-icon {
+    font-size: 1.3rem;
+  }
+
+  /* .Pico,
+  .descp,
+  .Productdata-info,
+  .Seller-details,
+  .customer-reviews-rating {
+    font-size: 0.9rem;
+  } */
+}
+
+@media screen and (max-width: 390px) {
+  /* iPhone 12 Pro */
+  .Product-Images {
+    max-width: 220px;
+  }
+
+  .Product-Data .single-product-name {
+    font-size: 0.8rem;
+  }
+
+  .ProductData-Price {
+    font-size: 0.9rem;
+  }
+
+  .ratings-and-reviews {
+    font-size: 0.8rem;
+  }
+
+  .SingleProduct-Warranty .Warranty-icon {
+    font-size: 1.2rem;
+  }
+
+  /* .Pico,
+  .descp,
+  .Productdata-info,
+  .Seller-details,
+  .customer-reviews-rating {
+    font-size: 0.8rem;
+  } */
+
+  /* .cart-btn {
+    font-size: 0.8rem;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .add-cart-icon {
+    font-size: 1rem;
+  } */
+}
+
+@media screen and (max-width: 450px) {
+  /* iPhone 14 Pro Max */
+
+  .Header-component .grid-two-column {
+    flex-direction: column;
+  }
+
+  .Product-Data {
+    width: 100%;
+  }
+
+  .Product-Images {
+    max-width: 300px;
+  }
+
+  .Product-Image-Cart-Buy-Part {
+    display: flex;
+    justify-content: center;
+  }
+
+  .Product-Data .single-product-name {
+    font-size: 1.3rem;
+  }
+
+  .ProductData-Price {
+    font-size: 1.1rem;
+  }
+
+  .ratings-and-reviews {
+    font-size: 1rem;
+  }
+
+  .SingleProduct-Warranty .Warranty-icon {
+    font-size: 1.4rem;
+  }
+
+  /* .Pico,
+  .descp,
+  .Productdata-info,
+  .Seller-details,
+  .customer-reviews-rating {
+    font-size: 1rem;
+  } */
+
+  .f-minus,
+  .f-plus {
+    padding: 2px 6px;
+    font-size: 1.2rem;
+  }
+
+  .amount-quantity {
+    padding: 2px 8px;
+    font-size: 1rem;
+  }
+}

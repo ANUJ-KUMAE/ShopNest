@@ -1,0 +1,485 @@
+/*----------------Admin Sidebar--------------------*/
+
+.sidebar-components {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 0.5rem 2rem;
+  background: linear-gradient(
+    90deg,
+    rgba(40, 13, 137, 1) 0%,
+    rgba(99, 84, 164, 0.9977240896358543) 20%
+  );
+}
+
+.sidebar-list {
+  padding: 1rem;
+}
+
+.sidebar-list .sidebar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.s-icon-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: bisque;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.s-icon-name li {
+  font-size: 1.2rem;
+}
+
+.s-icon-name a {
+  text-decoration: none;
+}
+
+.s-icon-name a:hover {
+  text-decoration: underline;
+}
+
+.s-icon-name .icons {
+  font-size: 1.2rem;
+}
+
+.title-name-user h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-decoration: underline;
+  text-decoration-color: blueviolet;
+}
+
+/*----------------------End Admin SideBar-----------------*/
+
+/*------------Admin---------*/
+.Admin-components {
+  display: flex;
+}
+
+.user-Container,
+.All-Products {
+  margin: 0.5rem 2rem;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background: white;
+  padding: 1rem 0;
+}
+
+.users-table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+table {
+  max-width: 100%;
+  width: 30%;
+  margin: auto;
+}
+
+table,
+th,
+td {
+  border: 2px solid black;
+}
+
+th,
+td {
+  padding: 5px 30px;
+}
+
+/*---Admin Add New Products---*/
+
+.Add-new-Product {
+  padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background: white;
+  margin: 0.5rem 2rem;
+}
+
+.Title-Product {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.Product-Details {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.Product-inputs,
+.shipping-datas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  max-width: 100%;
+  width: 30%;
+  margin: 0 auto;
+}
+
+.Product-Description {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  max-width: 100%;
+  width: 30%;
+  margin: 0 auto;
+}
+
+form input,
+textarea,
+select {
+  font-size: 1rem;
+  border: 2px solid black;
+  padding: 0.3rem 0.3rem;
+  border-radius: 10px;
+}
+
+label {
+  font-size: 1.2rem;
+}
+
+.add-product-button {
+  display: flex;
+  justify-content: center;
+}
+
+
+.product-input-image img {
+  height: 10vh;
+  width: 30%;
+}
+
+/*-------------------------Pagination---------------------*/
+
+.pagination {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.pagination button {
+  padding: 2px;
+}
+
+/*-------------------------Admin Products-----------------*/
+.All-Products {
+  padding: 2.5rem;
+}
+
+.Admin-Access-Products {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.Product-items {
+  text-align: center;
+}
+
+.Product-items img {
+  height: 60%;
+  width: 80%;
+}
+
+/*----Update Single User Details----*/
+
+.Update-Registered-User,
+.Shipping-Info {
+  padding: 2rem 2rem;
+}
+
+.Update-Title {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.Product-inputs-checkbox {
+  max-width: 100%;
+  width: 30%;
+  margin: 0 auto;
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+  align-items: center;
+}
+
+.admin-button {
+  display: flex;
+  gap: 1rem;
+}
+
+/*-------Order Details---------*/
+
+.Single-Order-Details {
+  padding: 1.5rem;
+  margin: 2rem 2rem;
+  background: url("../Images/plainb.jpg") no-repeat center center/cover;
+  /* border-radius: 20px; */
+}
+
+.Main-heading {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: chocolate;
+  text-decoration: underline;
+}
+
+.Order-Info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.Order-detail-Container {
+  /* border: 2px solid rgb(41, 34, 34); */
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  padding: 1rem;
+}
+
+.order-heading {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  text-align: center;
+  text-decoration: underline;
+  color: blueviolet;
+}
+
+.detail-types {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.detail-types .order-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.p-order-images img {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-order-images {
+  display: flex;
+  justify-content: center;
+}
+
+.Order-Delivered-Message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  border: 2px solid black;
+  margin: 5% auto;
+  padding: 10px 50px;
+  font-size: 1.5rem;
+  background-color: rgb(32, 135, 32);
+}
+
+.fa-check {
+  font-size: 5rem;
+  color: yellow;
+}
+
+/*----------------Update, Delete, View Button----------------*/
+
+.update-Button {
+  background-color: green;
+  color: white;
+  padding: 1px 2px;
+  font-weight: bold;
+}
+
+.update-Button:hover {
+  background-color: lightgreen;
+  color: black;
+}
+
+.delete-Button {
+  background-color: rgb(183, 5, 5);
+  color: white;
+  padding: 1px 2px;
+  font-weight: bold;
+}
+
+.delete-Button:hover {
+  background-color: lightcoral;
+  color: black;
+}
+
+.view-Button {
+  background-color: blue;
+  color: white;
+  padding: 1px 2px;
+  font-weight: bold;
+}
+
+.view-Button:hover {
+  background-color: lightblue;
+  color: black;
+}
+
+/*--------Order Styling-------*/
+
+@media screen and (max-width: 860px) {
+  .Order-Info {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .Product-inputs,
+  .shipping-datas,
+  .Product-Description,
+  .Product-inputs-checkbox {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .s-icon-name li,
+  .s-icon-name .icons {
+    font-size: 16px;
+  }
+
+  .Single-Order-Details {
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .sidebar-components {
+    margin: 0.5rem;
+  }
+
+  .sidebar-list {
+    padding: 10px;
+  }
+
+  .s-icon-name {
+    padding: 8px;
+    gap: 10px;
+  }
+
+  .s-icon-name li,
+  .s-icon-name .icons {
+    font-size: 12px;
+  }
+
+  .title-name-user h3 {
+    font-size: 1.2rem;
+  }
+
+  label {
+    font-size: 1rem;
+  }
+
+  .Product-inputs,
+  .shipping-datas,
+  .Product-Description,
+  .Product-inputs-checkbox {
+    width: 60%;
+  }
+
+  form input,
+  textarea,
+  select {
+    font-size: 15px;
+  }
+
+  .Product-inputs::placeholder,
+  .shipping-datas::placeholder,
+  .Product-Description::placeholder {
+    color: black;
+  }
+
+  .Add-new-Product,
+  .user-Container,
+  .All-Products {
+    margin: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .s-icon-name {
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  .sidebar-list .sidebar {
+    gap: 1rem;
+  }
+
+  .Product-inputs,
+  .shipping-datas,
+  .Product-Description,
+  .Product-inputs-checkbox {
+    width: 80%;
+  }
+
+  th,
+  td {
+    font-size: 12px;
+    padding: 3px 15px;
+  }
+
+  .view-Button,
+  .update-Button,
+  .delete-Button
+  {
+    font-weight: 400;
+    font-size: 10px;
+  }
+
+  .p-order-images img 
+  {
+    width: 80%;
+  }
+
+}
+
+@media screen and (max-width: 395px) {
+  .Product-inputs,
+  .Product-Description {
+    width: 90%;
+  }
+
+  .sidebar-list .sidebar {
+    gap: 0.8rem;
+  }
+
+  .p-order-images img 
+  {
+     height: 5vh;
+     width: 5vh;
+  }
+
+}

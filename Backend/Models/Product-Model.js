@@ -1,0 +1,100 @@
+const mongoose = require("mongoose");
+
+const ProductSchema = new mongoose.Schema({
+    name:{
+        type:String,
+        required:true
+    },
+    price:{
+        type:String,
+        required:true
+    },
+    discription:{
+        type:String,
+        required:true,
+    },
+    rating:{
+        type:Number,
+        default:0,
+    },
+    images:[
+        {
+            public_id:{
+                type:String,
+                required:true,
+            },
+            URL:{
+                type:String,
+                required:true,
+            },
+        }
+    ],
+    category: {
+        type:String,
+        required:true,
+        enum: {
+            values:[
+                'Mobiles',
+                'Tablets',
+                'SmartWatches',
+                'Laptop',
+                'Cameras',
+                'Headphone',
+                'Books',
+                'Bags',
+                'Luggage',
+                'Cloths',
+                'Shoes',
+                'Assasories',
+                'Home',
+                'Beauty/Health',
+                'Sports',
+                'Instruments',
+            ]
+        }
+    },
+    company:{
+         type:String,
+         required:true,
+    },
+    seller:{
+        type:String,
+        required:true,
+    },
+    stock:{
+        type:Number,
+        default:0,
+    },
+    numOfReviews:{
+        type:Number,
+        default:0,
+    },
+    review:[
+        {
+            name:{
+                type:String,
+                required:true
+            },
+            rating:{
+                type:Number,
+                required:true,
+            },
+            comment:{
+                type:String,
+                required:true,
+            },
+        }
+    ],
+    latest:{
+        type:Boolean,
+        default:false
+    },
+    createdAt:{
+        type:Date,
+        default:Date.now,
+    },
+});
+
+const ProductModel = new mongoose.model('Products',ProductSchema);
+
+module.exports = ProductModel;

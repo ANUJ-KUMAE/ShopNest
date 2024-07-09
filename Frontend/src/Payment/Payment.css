@@ -1,0 +1,83 @@
+.Payment-Container
+{
+    margin: 5rem 35rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.Payment-info 
+{
+    padding: 1rem;
+    background-color: bisque;
+}
+
+.payment-title
+{
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.payment-btn button
+{
+    width: 100%;
+}
+
+@media screen and (max-width:1030px)
+{
+    .Payment-Container
+    {
+        margin: 5rem 20rem;
+    }    
+}
+
+@media screen and (max-width:850px)
+{
+    .Payment-Container
+    {
+        margin: 5rem 10rem;
+    }    
+}
+
+@media screen and (max-width:550px)
+{
+    .payment-btn button
+    {
+        font-size: 1rem;
+    }  
+
+    .payment-title
+    {
+        font-size: 1.2rem;
+    }
+
+    .form-group 
+    {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:450px)
+{
+    .Payment-Container 
+    {
+        margin: 5rem 5rem;
+    }  
+}
+
+@media screen and (max-width:380px)
+{
+   .Payment-Container
+   {
+    margin: 3rem 2rem;
+   }  
+   
+   .payment-btn button
+    {
+        font-size: 12px;
+    }  
+
+    .form-group 
+    {
+        font-size: 12px;
+    }
+   
+}

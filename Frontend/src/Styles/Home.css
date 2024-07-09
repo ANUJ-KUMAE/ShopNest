@@ -1,0 +1,524 @@
+.home-container {
+  margin: 0 1rem;
+  overflow: hidden;
+}
+
+.products-type {
+  margin: 0.5rem 0;
+}
+
+.Images-lists {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Images-lists img {
+  width: 100%;
+  height: 55vh;
+}
+
+/*---------------------Latest Products--------------------*/
+
+.lastest-product-title {
+  font-family: cursive;
+  font-size: 1.7rem;
+}
+
+.home-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* margin: 0.5rem 0; */
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background-color: white;
+  padding: 16px 10px;
+}
+
+.latest-product-title {
+  font-size: 1.8rem;
+}
+
+.Products-lists-Datas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.AllProducts {
+  padding: 0.5rem;
+  width: 250px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  /* background-color: gray; */
+  background-color: rgb(223, 222, 222);
+  border-radius: 25px;
+}
+
+.image-container {
+  width: 212px;
+  height: 240px;
+  overflow: hidden;
+  margin: 10px;
+  border: 1px solid #ccc;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.AllProducts img {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: all 0.2s linear;
+}
+
+.AllProducts img:hover {
+  transition: scale(1.2);
+}
+
+.content {
+  font-weight: 800;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.fa-shopping-cart {
+  color: red;
+  font-size: 1.8rem;
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: #ccc;
+  border: none;
+  padding: 5px;
+}
+
+.product-icon {
+  width: 20%;
+}
+
+/*--------------------Poster Images-----------------*/
+
+.fashion-poster-image {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.home-latest-list {
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0.5rem 0;
+}
+
+.fashion-poster-image img {
+  height: 65vh;
+  width: 100%;
+  cursor: pointer;
+}
+
+/*--------------Special Offer---------------*/
+
+#Special-Offer {
+  position: relative;
+  margin-bottom: 0.5rem;
+  /* background-color:rgb(196, 161, 228); */
+}
+
+#Special-Offer::before {
+  content: "";
+  position: absolute;
+  background: url("../Images/MenOffer.jpg") no-repeat center center/cover;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+.Offer-Images img {
+  width: 50%;
+}
+
+.Offer-Details {
+  padding: 3rem 8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.Offer-data {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 50%;
+}
+
+.Offer-data .offer-heading-mid {
+  font-family: cursive;
+  font-size: 2rem;
+}
+
+.Offer-data .offer-paragraph {
+  font-family: Georgia, serif;
+}
+
+.shop-Now {
+  padding: 0.8rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background: none;
+  cursor: pointer;
+  border: 2px solid black;
+}
+
+.shop-Now:hover {
+  background-color: #ccc;
+  border: none;
+}
+
+.card figure,
+.cards figure {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s linear;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(62, 60, 60, 0.5);
+    transition: all 0.2s linear;
+    cursor: pointer;
+  }
+  &:hover::after {
+    width: 100%;
+  }
+  &:hover img {
+    transform: scale(1.2);
+  }
+  img {
+    max-width: 80%;
+    margin-top: 1.5rem;
+    height: 15rem;
+    transition: all 0.2s linear;
+    border-radius: 1rem;
+  }
+
+  .card-cart {
+    position: absolute;
+  }
+}
+
+.card,
+.offer-lists-Datas,
+.Product-lists-Datas {
+  background-color: #dedcdc;
+  border-radius: 1rem;
+  max-width: 100%;
+  width: 95%;
+  margin: 0 auto;
+
+  .card-data-flex {
+    margin: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  h3 {
+    color: cadetblue;
+    text-transform: capitalize;
+    font-size: 1rem;
+  }
+}
+
+.card-data-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/*---------------Offer Items--------------*/
+
+.card-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 10px;
+}
+
+.offer-lists {
+  display: flex;
+  gap: 1rem;
+}
+
+.special-offer-items {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 1rem;
+}
+
+.offer-section-datas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 5px;
+  /* padding: 10px; */
+  row-gap: 5px;
+}
+
+.offer-lists-Datas {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+  gap: 1rem;
+}
+
+.offer-section {
+  margin-top: 0;
+}
+
+.offer-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.men-accasories {
+  display: none;
+}
+
+/*---Responsive---*/
+
+@media screen and (max-width: 1030px) {
+  .Images-lists img {
+    height: 30vh;
+  }
+
+  .fashion-poster-image img {
+    height: 30vh;
+  }
+
+  .Offer-data {
+    width: 80%;
+  }
+
+  .offer-image img {
+    width: 95%;
+    height: 95%;
+  }
+}
+
+@media screen and (max-width: 915px) {
+  .AllProducts {
+    width: 190px;
+  }
+
+  .image-container {
+    width: 160px;
+    height: 200px;
+    align-items: center;
+  }
+
+  .Offer-data .offer-heading-mid {
+    font-size: 1.5rem;
+  }
+
+  .offer-lists {
+    gap: 0;
+  }
+
+  .offer-image img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .Offer-Details {
+    padding: 3rem;
+  }
+
+  .Offer-data {
+    width: 100%;
+  }
+
+  .Offer-data .offer-heading-mid {
+    font-size: 1rem;
+  }
+
+  .Offer-data .offer-paragraph {
+    font-size: 10px;
+  }
+
+  .shop-Now {
+    padding: 0.2rem 0.5rem;
+    font-size: 1rem;
+  }
+
+  .AllProducts {
+    padding: 0.3rem;
+    width: 120px;
+    border-radius: 0;
+  }
+
+  .image-container {
+    width: 100px;
+    height: 120px;
+    margin: 6px;
+    border-radius: 0;
+  }
+
+  .AllProducts img {
+    object-fit: fill;
+    border-radius: 0;
+  }
+
+  .content {
+    margin-top: 1.2rem;
+    font-size: 12px;
+    justify-content: center;
+    text-align: center;
+    padding: 0 12px;
+  }
+
+  .fa-shopping-cart {
+    /* font-size: 1.4rem; */
+    display: none;
+  }
+
+  .lastest-product-title {
+    font-size: 1rem;
+  }
+
+  .card figure,
+  .cards figure {
+    img {
+      height: 20vh;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+  }
+
+  .card,
+  .offer-lists-Datas,
+  .Product-lists-Datas {
+    border-radius: 10px;
+
+    h3 {
+      font-size: 12px;
+    }
+  }
+
+  .offer-section-datas {
+    column-gap: 10px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .home-container {
+    margin: 0 0.5rem;
+  }
+
+  .Images-lists img {
+    height: 20vh;
+  }
+
+  .fashion-poster-image img {
+    height: 20vh;
+  }
+
+  .AllProducts {
+    width: 100px;
+  }
+
+  .image-container {
+    width: 80px;
+    height: 100px;
+    margin: 0;
+  }
+
+  .Offer-Details {
+    padding: 2rem;
+  }
+
+  .content {
+    font-size: 10px;
+    flex-direction: row;
+    padding: 0;
+  }
+
+  .offer-heading {
+    font-size: 1rem;
+  }
+
+  .special-offer-items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card figure,
+  .cards figure {
+    img {
+      height: 10vh;
+    }
+  }
+
+  .card,
+  .offer-lists-Datas,
+  .Product-lists-Datas {
+    border-radius: 10px;
+
+    h3 {
+      font-size: 10px;
+    }
+  }
+
+  .card-data
+  {
+    padding: 5px;
+  }
+
+  .offer-image {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .offer-image img {
+    display: initial;
+    height: 50%;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .card figure,
+  .cards figure {
+    img {
+      height: 12vh;
+    }
+  }
+
+  .card-data {
+    padding: 5px;
+  }
+}
