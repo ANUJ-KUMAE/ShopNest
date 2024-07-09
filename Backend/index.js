@@ -1,29 +1,31 @@
-require('dotenv').config()
+require("dotenv").config();
+const mongoose = require("mongoose");
 const express = require("express");
 const cookieParser = require("cookie-parser");
 const app = express();
 const cors = require("cors");
-const DBConnection = require("./Database-Connection/Config")
+//const DBConnection = require("./Database-Connection/Config")
 const Authrouter = require("./Router/Auth-Router");
 const errorMiddleware = require("./Middleware/error-Middleware");
 const AdminRouter = require("./Router/Admin-Router");
-const ProductRouter = require("./Router/Product-Router")
+const ProductRouter = require("./Router/Product-Router");
 const OrderRouter = require("./Router/Order-Router");
 const PaymentRouter = require("./Router/Payment-Router");
 const fileUpload = require("express-fileupload");
-const bodyParser = require("body-parser")
+const bodyParser = require("body-parser");
+const http = require("http");
 
 var corsOption = {
-    origin:"http://localhost:5173",
-    methods:"GET, POST, PUT, DELETE, PATCH, HEAD",
-    credentials:true,
+  origin: "http://localhost:5173",
+  methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
+  credentials: true,
 };
 
 app.use(express.json());
 app.use(cors(corsOption));
 app.use(cookieParser());
-app.use(fileUpload({ useTempFiles: true  }));
-app.use(express.urlencoded({extended:true, limit:'50mb'}))
+app.use(fileUpload({ useTempFiles: true }));
+app.use(express.urlencoded({ extended: true, limit: "50mb" }));
 
 // {extended:true, limit:'50mb'}
 
@@ -35,10 +37,27 @@ app.use("/Api/Stripe", PaymentRouter);
 
 app.use(errorMiddleware);
 
+const URI = process.env.SERVER_LINK;
+
 const port = 8050;
 
-DBConnection().then(() => {
-    app.listen(port, () => {
-        console.log(`App is running on port ${port}`);
+const server = http.createServer(app);
+
+// DBConnection().then(() => {
+//   app.listen(port, () => {
+//     console.log(`App is running on port ${port}`);
+//   });
+// });
+
+mongoose
+  .connect(URI)
+  .then(() => {
+    console.log("Mongodb connected");
+    server.listen(port, () => {
+      console.log(`Server is listening on port ${port}`);
     });
-})
+  })
+  .catch((err) => {
+    console.log({ err });
+    process.exit(1);
+  });
