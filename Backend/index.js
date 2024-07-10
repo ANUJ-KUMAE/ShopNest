@@ -14,7 +14,7 @@ const fileUpload = require("express-fileupload");
 const bodyParser = require("body-parser");
 
 var corsOption = {
-  origin: "http://localhost:5173",
+  origin: "https://shop-nest-client.vercel.app",
   methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
   credentials: true,
 };
