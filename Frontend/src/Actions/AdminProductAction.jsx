@@ -32,7 +32,7 @@ const GetSingleAdminProduct = (_id) => async (dispatch) => {
     };
 
     const { data } = await axios.get(
-      `http://localhost:8050/Api/Admin/adminSingleProduct/${_id}`,
+      `https://shop-nest-api.vercel.app/Api/Admin/adminSingleProduct/${_id}`,
       configData
     );
 
@@ -62,7 +62,7 @@ const UpdateAdminSingleProduct = (_id, productData) => async (dispatch) => {
     };
 
     const { data } = await axios.put(
-      `http://localhost:8050/Api/Admin/adminUpdate/${_id}`,
+      `https://shop-nest-api.vercel.app/Api/Admin/adminUpdate/${_id}`,
       productData,
       configData
     );
@@ -93,7 +93,7 @@ const DeleteAdminProduct = (_id) => async (dispatch) => {
     };
 
     const { data } = await axios.delete(
-      `http://localhost:8050/Api/Admin/delete/${_id}`,
+      `https://shop-nest-api.vercel.app/Api/Admin/delete/${_id}`,
       configData
     );
 
@@ -124,7 +124,7 @@ const AddUserNewProduct = (productData) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      "http://localhost:8050/Api/Admin/addProducts",
+      "https://shop-nest-api.vercel.app/Api/Admin/addProducts",
       productData,
       configData
     );
@@ -158,7 +158,7 @@ const GetAllAdminProduct = (currentPage) => async (dispatch) => {
     };
 
     const { data } = await axios.get(
-      `http://localhost:8050/Api/Admin/adminproducts?page=${currentPage}`,
+      `https://shop-nest-api.vercel.app/Api/Admin/adminproducts?page=${currentPage}`,
       configData
     );
 

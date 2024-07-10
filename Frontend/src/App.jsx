@@ -68,7 +68,7 @@ function App() {
 
     async function getStripeApiKey() {
       const { data } = await axios.get(
-        "http://localhost:8050/Api/Stripe/payment/info",
+        "https://shop-nest-api.vercel.app/Api/Stripe/payment/info",
         configData
       );
       setStripeApiKey(data.stripeApiKey);

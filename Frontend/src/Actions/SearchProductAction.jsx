@@ -10,7 +10,7 @@ const SearchAction = (value) => async (dispatch) => {
     dispatch({ type: SEARCH_PRODUCT_REQUEST });
 
     const { data } = await axios.get(
-      `http://localhost:8050/Api/user/search/${value}`
+      `https://shop-nest-api.vercel.app/Api/user/search/${value}`
     );
 
     dispatch({ type: SEARCH_PRODUCT_SECCESS, payload: data });

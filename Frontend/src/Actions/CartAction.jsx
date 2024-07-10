@@ -8,7 +8,7 @@ import {
 
 const CartProduct = (id, quantity) => async (dispatch, getState) => {
   const { data } = await axios.get(
-    `http://localhost:8050/Api/user/userSingleProduct/${id}`
+    `https://shop-nest-api.vercel.app/Api/user/userSingleProduct/${id}`
   );
 
   dispatch({

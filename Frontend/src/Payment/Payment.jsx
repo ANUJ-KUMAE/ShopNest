@@ -36,19 +36,7 @@ const Payment = () => {
 
   useEffect(() => {});
 
-  // const [customer, setCustomer] = useState({
-  //   name: user.userName || '',
-  //   email: user.email || '',
-  //   address: {
-  //     line1: shippingInfo.address || '',
-  //     city: shippingInfo.city || '',
-  //     state: shippingInfo.state || '',
-  //     postal_code: shippingInfo.postalcode || '',
-  //     country: shippingInfo.country || '',
-  //   },
-  //   phone: user.phone || ''
-  // });
-
+ 
   const orderinfo = JSON.parse(sessionStorage.getItem("OrderInfo"));
 
   const orderItem = cartItems.map((item) => ({
@@ -89,7 +77,7 @@ const Payment = () => {
       };
 
       res = await axios.post(
-        "http://localhost:8050/Api/Stripe/payment/process",
+        "https://shop-nest-api.vercel.app/Api/Stripe/payment/process",
         paymentData,
         configData
       );

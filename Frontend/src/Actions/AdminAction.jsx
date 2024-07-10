@@ -32,7 +32,7 @@ const GetAllUsersData = () => async (dispatch) => {
     };
 
     const { data } = await axios.get(
-      "http://localhost:8050/Api/Admin/getAllUserData",
+      "https://shop-nest-api.vercel.app/Api/Admin/getAllUserData",
       configData
     );
 
@@ -62,7 +62,7 @@ const GetSingleRegistereduserData = (_id) => async (dispatch) => {
     };
 
     const { data } = await axios.get(
-      `http://localhost:8050/Api/Admin/getSingleUSerDetails/${_id}`,
+      `https://shop-nest-api.vercel.app/Api/Admin/getSingleUSerDetails/${_id}`,
       configData
     );
 
@@ -93,7 +93,7 @@ const UpdateSingleUsers = (_id, userData) => async(dispatch) => {
     };
 
     const { data } = await axios.put(
-      `http://localhost:8050/Api/Admin/updateSingleUserDetail/${_id}`,
+      `https://shop-nest-api.vercel.app/Api/Admin/updateSingleUserDetail/${_id}`,
       userData,
       configData
     );
@@ -126,7 +126,7 @@ const DeleteAdminUser = (_id) => async(dispatch) => {
     };
 
     const { data } = await axios.delete(
-      `http://localhost:8050/Api/Admin/deleteUser/${_id}`,
+      `https://shop-nest-api.vercel.app/Api/Admin/deleteUser/${_id}`,
       configData
     );
 

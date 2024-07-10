@@ -34,7 +34,7 @@ const CreateUserOrder = (orderData) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      "http://localhost:8050/Api/users/items/orderItems",
+      "https://shop-nest-api.vercel.app/Api/users/items/orderItems",
       orderData,
       configData
     );
@@ -65,7 +65,7 @@ const GetAllOrder = () => async (dispatch) => {
     };
 
     const { data } = await axios.get(
-      "http://localhost:8050/Api/users/items/allOrders/me",
+      "https://shop-nest-api.vercel.app/Api/users/items/allOrders/me",
       configData
     );
 
@@ -95,7 +95,7 @@ const GetSingleOrder = (_id) => async (dispatch) => {
     };
 
     const { data } = await axios.get(
-      `http://localhost:8050/Api/users/items/getSingleitem/${_id}`,
+      `https://shop-nest-api.vercel.app/Api/users/items/getSingleitem/${_id}`,
       configData
     );
 
@@ -127,7 +127,7 @@ const AllUserOrders = () => async (dispatch) => {
     };
 
     const { data } = await axios.get(
-      "http://localhost:8050/Api/Admin/allUserOrders",
+      "https://shop-nest-api.vercel.app/Api/Admin/allUserOrders",
       configData
     );
 
@@ -163,7 +163,7 @@ const SingleUserOrder = (_id) => async (dispatch) => {
     };
 
     const { data } = await axios.get(
-      `http://localhost:8050/Api/Admin/userSingleOrder/${_id}`,
+      `https://shop-nest-api.vercel.app/Api/Admin/userSingleOrder/${_id}`,
       configData
     );
 
@@ -194,7 +194,7 @@ const AdminUpdateOrder = (_id, Status) => async (dispatch) => {
     };
 
     const { data } = await axios.put(
-      `http://localhost:8050/Api/Admin/allUserOrders/updateOrder/${_id}`,
+      `https://shop-nest-api.vercel.app/Api/Admin/allUserOrders/updateOrder/${_id}`,
       { Status },
       configData
     );
@@ -227,7 +227,7 @@ const DeleteUserOrder = (_id) => async (dispatch) => {
     };
 
     const { data } = await axios.delete(
-      `http://localhost:8050/Api/users/items/deleteOrder/${_id}`,
+      `https://shop-nest-api.vercel.app/Api/users/items/deleteOrder/${_id}`,
       configData
     );
 

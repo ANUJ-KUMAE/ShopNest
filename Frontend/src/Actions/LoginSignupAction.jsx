@@ -32,7 +32,7 @@ const LoginAction = (email, password) => async (dispatch) => {
 
     
     const { data } = await axios.post(
-      "http://localhost:8050/Api/auth/login",
+      "https://shop-nest-api.vercel.app/Api/auth/login",
       { email, password },
       configData,
     );
@@ -63,7 +63,7 @@ const LoadLoginUser = () => async (dispatch) => {
     };
 
     const { data } = await axios.get(
-      "http://localhost:8050/Api/auth/userDetails",
+      "https://shop-nest-api.vercel.app/Api/auth/userDetails",
       configData
     );
 
@@ -91,7 +91,7 @@ const RegisterAction = (newUser) => async (dispatch) => {
 
 
     const { data } = await axios.post(
-      "http://localhost:8050/Api/auth/register",
+      "https://shop-nest-api.vercel.app/Api/auth/register",
       newUser,
       configData,
     );
@@ -140,7 +140,7 @@ const UpdateUserProfile = (formData, _id) => async (dispatch) => {
     };
 
     const { data } = await axios.put(
-      `http://localhost:8050/Api/auth/profileUpdate/${_id}`,
+      `https://shop-nest-api.vercel.app/Api/auth/profileUpdate/${_id}`,
       formData,
       configData
     );

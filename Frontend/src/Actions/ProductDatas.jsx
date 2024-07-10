@@ -16,7 +16,7 @@ export const getAllProductData = () => async (dispatch) => {
   try {
     dispatch({ type: Product_Request });
 
-    const { data } = await axios.get("http://localhost:8050/Api/user/products");
+    const { data } = await axios.get("https://shop-nest-api.vercel.app/Api/user/products");
 
     dispatch({
       type: Product_Success,
@@ -35,7 +35,7 @@ export const getSingleProductData = (_id) => async (dispatch) => {
     dispatch({ type: Single_Product_Request });
 
     const { data } = await axios.get(
-      `http://localhost:8050/Api/user/userSingleProduct/${_id}`
+      `https://shop-nest-api.vercel.app/Api/user/userSingleProduct/${_id}`
     );
     //const singleData = await result.data;
 
@@ -53,7 +53,7 @@ export const getSimilarProducts = (Category, id) => async (dispatch) => {
     dispatch({ type: SIMILAR_PRODUCT_REQUEST });
 
     const { data } = await axios.get(
-      `http://localhost:8050/Api/user/search/similarProducts/${Category}/${id}`
+      `https://shop-nest-api.vercel.app/Api/user/search/similarProducts/${Category}/${id}`
     );
 
     dispatch({
