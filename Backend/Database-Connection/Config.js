@@ -10,7 +10,7 @@ const DBConnection = async () => {
         console.log("Database Connected")
     } catch (error) {
         console.log(error);
-        process.exit(0);
+        process.exit(1);
     }
 }
 
