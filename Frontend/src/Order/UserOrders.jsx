@@ -66,7 +66,7 @@ const UserOrders = () => {
                   <th>User Id</th>
                   <th>Status</th>
                   <th>Details</th>
-                  <th>Delete</th>
+                  <th>Cancel</th>
                 </tr>
               </thead>
               <tbody>

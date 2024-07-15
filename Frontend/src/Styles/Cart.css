@@ -264,35 +264,16 @@
       font-size: 1rem;
     }
 
+    .Not-Authenticated-user h3,
+    .cart-name-title h3 
+    {
+      font-size: 1.1rem;
+    }
+
 }
 
 @media screen and (max-width: 450px)  
 {
-    /* .cart-datas-list-item
-    {
-        gap: 3rem;
-    }
-
-    .product-details
-    {
-        gap: 2rem;
-    } */
-
-    /* .Cart-lists
-    {
-        padding: 1rem;
-    }
-
-    .price-info
-    {
-        font-size: 1rem;
-    }
-
-    .price-symbol
-    {
-        font-size: 0.8rem;
-    } */
-
     .cart-left-right-part
     {
         flex-direction: column;
@@ -327,6 +308,13 @@
     {
       height: 2px;
     }
+
+    .Not-Authenticated-user h3,
+    .cart-name-title h3 
+    {
+       font-size: 12px;
+    }
+
 }
 
 @media screen and (max-width: 400px)  
