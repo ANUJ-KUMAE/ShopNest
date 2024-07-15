@@ -185,6 +185,11 @@
         gap: 5px;
     }
 
+    .Account-already span 
+    {
+        font-size: 14px;
+    }
+
 
 }
 
