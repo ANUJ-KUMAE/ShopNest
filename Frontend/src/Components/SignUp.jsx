@@ -29,9 +29,13 @@ const SignUp = () => {
     }
 
     if (error) {
-      toast.error(
-        error.data.extraDetails ? error.data.message : error.data.extraDetails
-      );
+      if (error.data.Message) {
+        error.data.Message.forEach((msg) => {
+          toast.error(msg);
+        });
+      } else {
+        toast.error(error.data.extradetails);
+      }
       dispatch(ClearErrors());
     }
   }, [dispatch, error, isAuthenticated, navigate]);
