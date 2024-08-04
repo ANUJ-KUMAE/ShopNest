@@ -5,7 +5,7 @@ import Logo from "../Images/Shop.png";
 import "../Styles/Signup.css";
 import { useDispatch, useSelector } from "react-redux";
 import { ClearErrors, LoginAction } from "../Actions/LoginSignupAction";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 
 const Login = () => {
   const [singleUser, setSingleUser] = useState({
@@ -27,8 +27,17 @@ const Login = () => {
     }
 
     if (error) {
+      const messages = error.data.message;
+
+      if (Array.isArray(messages)) {
+        messages.forEach((msg) => {
+          toast.error(msg);
+        });
+      } else {
+        toast.error(messages || error.data.extraDetails);
+      }
+
       dispatch(ClearErrors());
-      toast.error("Check Email And Password");
     }
   }, [dispatch, error, isAuthenticated, navigate]);
 
@@ -48,7 +57,7 @@ const Login = () => {
     e.preventDefault();
     //console.log(singleUser);
     //console.log(token);
-    dispatch(LoginAction(singleUser.email, singleUser.password))
+    dispatch(LoginAction(singleUser.email, singleUser.password));
   };
 
   return (

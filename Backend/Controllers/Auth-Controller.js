@@ -18,8 +18,6 @@ const registration = async (req, resp) => {
       password,
     });
 
-    //sendToken(UserCreated, 201, resp, "Registration Successful");
-
     resp.status(201).send({
       msg: "Register Successful",
       token: await UserCreated.generateToken(),
@@ -40,17 +38,10 @@ const loginData = async (req, resp) => {
     const user = await UserModel.findOne({ email });
 
     if (!user) {
-      return resp.status(401).json({ Message: "Invalid User" });
+      return resp.status(401).json({ message: "Check Email And Password" });
     } else {
       const userlogin = await user.ComparePassword(password);
 
-      // if (userlogin) {
-      //   sendToken(user, 201, resp, "Login Successful");
-      // } else {
-      //   return resp
-      //     .status(401)
-      //     .json({ msg: "Please Check Email And Password" });
-      // }
 
       if (userlogin) {
         resp.status(201).send({
