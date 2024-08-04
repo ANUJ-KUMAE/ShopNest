@@ -117,8 +117,24 @@ const updateProfile = async (req, resp) => {
   }
 }
 
+const logout = async (req, resp) => {
+  try {
+    // resp.cookie("UserToken", null, {
+    //   expires: new Date(Date.now()),
+    //   httpOnly: true,
+    // });
+
+    resp.clearCookie("UserToken");
+
+    resp.status(200).json({
+      success: true,
+      message: "Logout Successfully",
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 
 
-
-module.exports = { registration, loginData, userProfile, updatePassword, updateProfile};
+module.exports = { registration, loginData, logout, userProfile, updatePassword, updateProfile};
