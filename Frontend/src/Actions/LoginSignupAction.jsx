@@ -30,16 +30,14 @@ const LoginAction = (email, password) => async (dispatch) => {
       },
     };
 
-    
     const { data } = await axios.post(
       "https://shop-nest-api.vercel.app/Api/auth/login",
       { email, password },
-      configData,
+      configData
     );
 
-
     dispatch({ type: Login_Success, payload: data.user });
-    localStorage.setItem('token', data.token);
+    localStorage.setItem("token", data.token);
   } catch (error) {
     dispatch({
       type: Login_Fail,
@@ -50,12 +48,11 @@ const LoginAction = (email, password) => async (dispatch) => {
 
 const LoadLoginUser = () => async (dispatch) => {
   try {
-
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem("token");
     const AuthorizationToken = `Bearer ${token}`;
 
     dispatch({ type: Load_LoginUser_Request });
-    
+
     const configData = {
       headers: {
         Authorization: AuthorizationToken,
@@ -89,33 +86,31 @@ const RegisterAction = (newUser) => async (dispatch) => {
       },
     };
 
-
     const { data } = await axios.post(
       "https://shop-nest-api.vercel.app/Api/auth/register",
       newUser,
-      configData,
+      configData
     );
 
     dispatch({
       type: REGISTER_SUCCESS,
       payload: data.UserCreated,
     });
-    localStorage.setItem('token', data.token);
+    localStorage.setItem("token", data.token);
   } catch (error) {
     dispatch({
       type: REGISTER_FAIL,
-      payload: error.response.data.message,
+      payload: error.response,
     });
   }
 };
 
 const LogoutAction = () => (dispatch) => {
   try {
-    localStorage.removeItem('token');
+    localStorage.removeItem("token");
     dispatch({
       type: Logout_Success,
     });
-
   } catch (error) {
     dispatch({
       type: Logout_Fail,
@@ -126,8 +121,7 @@ const LogoutAction = () => (dispatch) => {
 
 const UpdateUserProfile = (formData, _id) => async (dispatch) => {
   try {
-
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem("token");
     const AuthorizationToken = `Bearer ${token}`;
 
     dispatch({ type: UPDATE_PROFILE_REQUEST });
@@ -152,10 +146,10 @@ const UpdateUserProfile = (formData, _id) => async (dispatch) => {
       payload: data.newProfile,
     });
   } catch (error) {
-      dispatch({
-        type: UPDATE_PROFILE_FAIL,
-        payload: error.response.data.message,
-      });
+    dispatch({
+      type: UPDATE_PROFILE_FAIL,
+      payload: error.response.data.message,
+    });
   }
 };
 
