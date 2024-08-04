@@ -29,12 +29,12 @@ const SignUp = () => {
     }
 
     if (error) {
-      if (error.data.Message) {
-        error.data.Message.forEach((msg) => {
+      if (error.data.message) {
+        error.data.message.forEach((msg) => {
           toast.error(msg);
         });
       } else {
-        toast.error(error.data.extradetails);
+        toast.error(error.data.extraDetails);
       }
       dispatch(ClearErrors());
     }

@@ -68,9 +68,9 @@ const Navbar = () => {
                         Orders
                       </NavLink>
                     </li>
-                    <hr className="drop-lists-horizontal" />
                     {user && user.isAdmin ? (
                       <>
+                        <hr className="drop-lists-horizontal" />
                         <li className="drop-lists">
                           <NavLink to="/admin">
                             <RiAdminFill className="drop-list-icons" />
