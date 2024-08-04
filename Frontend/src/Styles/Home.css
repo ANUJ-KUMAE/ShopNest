@@ -354,6 +354,12 @@
 }
 
 @media screen and (max-width: 550px) {
+
+  .home-container
+  {
+    margin: 0;
+  }
+
   .Offer-Details {
     padding: 3rem;
   }
@@ -435,9 +441,9 @@
 }
 
 @media screen and (max-width: 450px) {
-  .home-container {
+  /* .home-container {
     margin: 0 0.5rem;
-  }
+  } */
 
   .Images-lists img {
     height: 20vh;
