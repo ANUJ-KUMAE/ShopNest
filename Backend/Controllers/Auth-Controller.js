@@ -29,7 +29,7 @@ const registration = async (req, resp) => {
 
   } catch (error) {
     console.log(error);
-    next();
+    next(error);
   }
 };
 
