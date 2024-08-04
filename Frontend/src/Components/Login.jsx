@@ -23,7 +23,6 @@ const Login = () => {
   useEffect(() => {
     if (isAuthenticated) {
       navigate("/");
-      //toast.success("Login Successful");
     }
 
     if (error) {
@@ -51,12 +50,10 @@ const Login = () => {
     });
   };
 
-  // const token = cookies.get('token');
 
   const handleSubmit = (e) => {
     e.preventDefault();
     //console.log(singleUser);
-    //console.log(token);
     dispatch(LoginAction(singleUser.email, singleUser.password));
   };
 
@@ -105,7 +102,7 @@ const Login = () => {
                   />
                 </div>
                 <div className="form-button">
-                  <button className="btn">Submit</button>
+                  <button className="btn" disabled>Submit</button>
                 </div>
                 <div className="Account-already">
                   <p>

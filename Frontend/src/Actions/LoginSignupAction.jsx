@@ -113,6 +113,7 @@ const LogoutAction = () => (dispatch) => {
     dispatch({
       type: Logout_Success,
     });
+    toast.success("Logout Successfully")
   } catch (error) {
     dispatch({
       type: Logout_Fail,
@@ -140,8 +141,6 @@ const UpdateUserProfile = (formData, _id) => async (dispatch) => {
       formData,
       configData
     );
-
-    console.log(data);
 
     dispatch({
       type: UPDATE_PROFILE_SUCCESS,

@@ -29,14 +29,6 @@ const SignUp = () => {
     }
 
     if (error) {
-      // if (error.data.message) {
-      //   error.data.message.forEach((msg) => {
-      //     toast.error(msg);
-      //   });
-      // } else {
-      //   toast.error(error.data.extraDetails);
-      // }
-
       const messages = error.data.message;
 
       if (Array.isArray(messages)) {
@@ -139,7 +131,7 @@ const SignUp = () => {
                 <p>Accept All Terms And Conditions</p>
               </div>
               <div className="form-button">
-                <button className="btn">Submit</button>
+                <button className="btn" disabled>Submit</button>
               </div>
               <div className="Account-already">
                 <p>
