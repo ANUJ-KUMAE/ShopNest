@@ -29,13 +29,16 @@ const SignUp = () => {
     }
 
     if (error) {
-      if (error.data.message) {
-        error.data.message.forEach((msg) => {
-          toast.error(msg);
-        });
-      } else {
-        toast.error(error.data.extraDetails);
-      }
+      // if (error.data.message) {
+      //   error.data.message.forEach((msg) => {
+      //     toast.error(msg);
+      //   });
+      // } else {
+      //   toast.error(error.data.extraDetails);
+      // }
+      toast.error(
+        error.data.extraDetails ? error.data.message : error.data.extraDetails
+      );
       dispatch(ClearErrors());
     }
   }, [dispatch, error, isAuthenticated, navigate]);
