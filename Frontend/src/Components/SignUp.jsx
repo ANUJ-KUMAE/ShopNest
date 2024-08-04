@@ -29,13 +29,24 @@ const SignUp = () => {
     }
 
     if (error) {
-      if (error.data.message) {
-        error.data.message.forEach((msg) => {
+      // if (error.data.message) {
+      //   error.data.message.forEach((msg) => {
+      //     toast.error(msg);
+      //   });
+      // } else {
+      //   toast.error(error.data.extraDetails);
+      // }
+
+      const messages = error.data.message;
+
+      if (Array.isArray(messages)) {
+        messages.forEach((msg) => {
           toast.error(msg);
         });
       } else {
-        toast.error(error.data.extraDetails);
+        toast.error(messages || error.data.extraDetails);
       }
+
       dispatch(ClearErrors());
     }
   }, [dispatch, error, isAuthenticated, navigate]);
