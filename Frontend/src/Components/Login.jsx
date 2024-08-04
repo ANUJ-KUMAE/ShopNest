@@ -102,7 +102,7 @@ const Login = () => {
                   />
                 </div>
                 <div className="form-button">
-                  <button className="btn" disabled>Submit</button>
+                  <button className="btn">Submit</button>
                 </div>
                 <div className="Account-already">
                   <p>
