@@ -41,7 +41,7 @@ const LoginAction = (email, password) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: Login_Fail,
-      payload: error,
+      payload: error.response,
     });
   }
 };
