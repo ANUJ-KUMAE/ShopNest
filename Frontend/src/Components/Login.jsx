@@ -23,7 +23,7 @@ const Login = () => {
   useEffect(() => {
     if (isAuthenticated) {
       navigate("/");
-      toast.success("Login Successful");
+      //toast.success("Login Successful");
     }
 
     if (error) {

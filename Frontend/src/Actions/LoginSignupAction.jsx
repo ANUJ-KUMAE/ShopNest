@@ -19,6 +19,7 @@ import {
   UPDATE_PROFILE_REQUEST,
   UPDATE_PROFILE_SUCCESS,
 } from "../Constants/UpdateConstant";
+import { toast } from "react-toastify";
 
 const LoginAction = (email, password) => async (dispatch) => {
   try {
@@ -38,6 +39,7 @@ const LoginAction = (email, password) => async (dispatch) => {
 
     dispatch({ type: Login_Success, payload: data.user });
     localStorage.setItem("token", data.token);
+    toast.success(data.msg);
   } catch (error) {
     dispatch({
       type: Login_Fail,
