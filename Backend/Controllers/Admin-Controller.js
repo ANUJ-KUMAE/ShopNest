@@ -1,7 +1,7 @@
 const UserModel = require("../Models/Auth-Model");
 const OrderModel = require("../Models/Order");
 const ProductModel = require("../Models/Product-Model");
-const cloudinary = require("../Cloudordinary/CloudConfig");
+const cloudinary = require("../Cloudinary/CloudConfig");
 
 const addProducts = async (req, resp, next) => {
   try {
@@ -37,13 +37,14 @@ const addProducts = async (req, resp, next) => {
 
 const getAllProducts = async (req, resp, next) => {
   try {
-
     const ProductPerPage = 10;
     const Currentpage = Number(req.query.page) || 1;
     const skip = ProductPerPage * (Currentpage - 1);
 
-    const getProduct = await ProductModel.find().limit(ProductPerPage).skip(skip);
-    resp.status(201).json({success:true, getProduct});
+    const getProduct = await ProductModel.find()
+      .limit(ProductPerPage)
+      .skip(skip);
+    resp.status(201).json({ success: true, getProduct });
   } catch (error) {
     next(error);
   }
@@ -208,11 +209,9 @@ const UpdateUserOrder = async (req, resp, next) => {
     });
 
     const UpdateOrderStatus = {
-      orderStatus : req.body.Status,
-      deliverAt : Date.now()
-    }
-
-
+      orderStatus: req.body.Status,
+      deliverAt: Date.now(),
+    };
 
     //userOrderUpdate.orderStatus = req.body.orderStatus;
     //userOrderUpdate.deliverAt = Date.now();
@@ -221,11 +220,14 @@ const UpdateUserOrder = async (req, resp, next) => {
 
     //await userOrderUpdate.updateOne();
 
-    const OrderUpdated = await OrderModel.updateOne({_id:req.params.id}, {$set:UpdateOrderStatus})
+    const OrderUpdated = await OrderModel.updateOne(
+      { _id: req.params.id },
+      { $set: UpdateOrderStatus }
+    );
 
     return resp.status(201).json({
       success: true,
-      OrderUpdated
+      OrderUpdated,
     });
   } catch (error) {
     console.log(error);
@@ -234,7 +236,7 @@ const UpdateUserOrder = async (req, resp, next) => {
 };
 
 async function UpdateStock(id, quantity) {
-  const Userproduct = await ProductModel.findOne({_id:id});
+  const Userproduct = await ProductModel.findOne({ _id: id });
 
   Userproduct.stock = Userproduct.stock - quantity;
 
